@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:rgb(100,100,255)">
+
+    <a-camera wasd-controls-enabled="false" position="0 0 0"></a-camera>
+
+    <a-assets>
+        <a-asset-item id="table-obj" src="./images/obj.mtl"></a-asset-item>   
+        <a-asset-item id="table-mtl" src="./images/tinker.obj"></a-asset-item>  
+        <a-asset-item id="table-gltf" src="./images/Train.glb"></a-asset-item>          
+    </a-assets>
+    
+    
+    <a-entity obj-model="obj: #train-obj; mtl: #train-mtl"  position="0 -1 -3" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+    
+    <a-circle id="floor" position="-0.4 -0.76 -25" rotation="-90 0 0" radius="100" shadow="receive: true" visible="true"
+      color="rgb(150,150,150)">
+    </a-circle>
+  </a-scene>
+</body>
+
+</html>
